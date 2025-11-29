@@ -1,0 +1,2 @@
+[console_scripts]
+student-system = student_system.app.main:main
