@@ -2,7 +2,7 @@ from student_system.data.database import Database
 
 
 def main() -> None:
-    db = Database()
+    db = Database(connection=None)
 
     while True:
         print("STUDENT SYSTEM")

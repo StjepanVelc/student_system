@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 from pathlib import Path
-
+import sqlite3
 from student_system.data.database import Database
 from student_system.io.export_csv import export_students_to_csv
 
@@ -10,9 +10,9 @@ class StudentApp(tk.Tk):
     def __init__(self) -> None:
         super().__init__()
         self.title("Student System")
+        connection = sqlite3.connect("students.db")
+        self.db = Database(connection)
         self.geometry("700x400")
-
-        self.db = Database()
 
         self._build_widgets()
         self._refresh_list()

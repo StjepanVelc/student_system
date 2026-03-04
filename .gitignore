@@ -1,0 +1,17 @@
+# virtual environment
+.venv/
+
+# python cache
+__pycache__/
+*.pyc
+
+# database
+students.db
+
+# build files
+dist/
+build/
+*.egg-info/
+
+# exports
+exports/
