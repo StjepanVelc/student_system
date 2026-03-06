@@ -1,8 +1,9 @@
 from student_system.data.database import Database
-
+import sqlite3
 
 def main() -> None:
-    db = Database(connection=None)
+    connection = sqlite3.connect("students.db")
+    db = Database(connection)
 
     while True:
         print("STUDENT SYSTEM")
